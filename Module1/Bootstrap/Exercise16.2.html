@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Badge Overlay</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f8fafc;
+    }
+
+    .card-custom {
+      border: none;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+    }
+
+    .card-custom:hover {
+      transform: scale(1.02);
+    }
+
+    .image-wrapper {
+      position: relative;
+    }
+
+    .badge-custom {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 0.9rem;
+      padding: 0.5rem 0.75rem;
+    }
+
+    .card-body {
+      padding: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container my-5">
+  <div class="card card-custom mx-auto" style="max-width: 400px;">
+    <div class="image-wrapper">
+      <img src="https://source.unsplash.com/400x250/?product" class="img-fluid" alt="Product Image">
+      <span class="badge bg-danger rounded-pill badge-custom">New</span>
+    </div>
+    <div class="card-body text-center">
+      <h5 class="card-title fw-bold">Stylish Product</h5>
+      <p class="card-text text-muted">This product features a badge overlay using <code>position-absolute</code>.</p>
+      <a href="#" class="btn btn-primary rounded-pill">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

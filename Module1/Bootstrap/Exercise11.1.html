@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap 5 Profile Card</title>
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: #f1f5f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+    .profile-card {
+      max-width: 320px;
+      border-radius: 15px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+      background: #fff;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .profile-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+    .card-img-top {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      height: 280px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 1.6rem 1.5rem 2rem;
+      text-align: center;
+    }
+    .card-title {
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin-bottom: 0.25rem;
+      color: #1e293b;
+    }
+    .card-subtitle {
+      font-weight: 500;
+      font-size: 1rem;
+      color: #64748b;
+      margin-bottom: 1rem;
+    }
+    .card-text {
+      font-size: 0.95rem;
+      color: #475569;
+      margin-bottom: 1.6rem;
+      line-height: 1.4;
+    }
+    .btn-profile {
+      background-color: #3b82f6;
+      border: none;
+      padding: 0.6rem 1.6rem;
+      border-radius: 50px;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn-profile:hover {
+      background-color: #2563eb;
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.6);
+      color: #e0e7ff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card profile-card">
+    <img
+      src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80"
+      class="card-img-top"
+      alt="Profile Image"
+    />
+    <div class="card-body">
+      <h5 class="card-title">Jane Doe</h5>
+      <h6 class="card-subtitle mb-2 text-muted">UI/UX Designer</h6>
+      <p class="card-text">
+        Passionate about crafting user-friendly designs and enhancing digital experiences. Loves coffee and hiking.
+      </p>
+      <a href="#" class="btn btn-profile">Follow</a>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

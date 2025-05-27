@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Save User Preferences Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #f9f9f9;
+      color: #333;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+    }
+    select {
+      font-size: 1rem;
+      padding: 6px 10px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      width: 250px;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    #status {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Event Type Preference</h1>
+
+  <label for="eventType">Select your preferred event type:</label>
+  <select id="eventType">
+    <option value="">-- Select Event Type --</option>
+    <option value="festival">Festival</option>
+    <option value="cleanup">Cleanup Drive</option>
+    <option value="concert">Music Concert</option>
+    <option value="market">Farmers Market</option>
+    <option value="sports">Youth Sports</option>
+    <option value="holiday">Holiday Celebration</option>
+  </select>
+
+  <button id="clearPrefsBtn">Clear Preferences</button>
+
+  <p id="status"></p>
+
+  <script>
+    const eventTypeSelect = document.getElementById('eventType');
+    const clearPrefsBtn = document.getElementById('clearPrefsBtn');
+    const status = document.getElementById('status');
+
+    // On page load, check if a preferred event type exists in localStorage
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedEventType = localStorage.getItem('preferredEventType');
+      if (savedEventType) {
+        eventTypeSelect.value = savedEventType;
+        status.textContent = `Your preferred event type "${savedEventType}" is loaded.`;
+      }
+    });
+
+    // Save preference when user selects an event type
+    eventTypeSelect.addEventListener('change', () => {
+      const selected = eventTypeSelect.value;
+      if (selected) {
+        localStorage.setItem('preferredEventType', selected);
+        // Also save something in sessionStorage as demo (optional)
+        sessionStorage.setItem('sessionSelectedEvent', selected);
+        status.textContent = `Preference saved: ${selected}`;
+      } else {
+        status.textContent = 'No event type selected.';
+      }
+    });
+
+    // Clear both localStorage and sessionStorage on button click
+    clearPrefsBtn.addEventListener('click', () => {
+      localStorage.removeItem('preferredEventType');
+      sessionStorage.clear();
+      eventTypeSelect.value = "";
+      status.textContent = 'Preferences cleared.';
+    });
+  </script>
+
+</body>
+</html>

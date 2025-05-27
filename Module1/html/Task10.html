@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Debugging Demo</title>
+  <style>
+    /* Some basic styles */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #message {
+      margin-top: 15px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1>Debugging with Chrome DevTools</h1>
+
+  <!-- Form with input -->
+  <label for="nameInput">Enter your name:</label>
+  <input type="text" id="nameInput" placeholder="Type your name" />
+
+  <button id="greetBtn">Greet Me</button>
+
+  <p id="message"></p>
+
+  <script>
+    // Grab elements
+    const nameInput = document.getElementById("nameInput");
+    const greetBtn = document.getElementById("greetBtn");
+    const message = document.getElementById("message");
+
+    // Log initial message
+    console.log("Page loaded. Ready to greet!");
+
+    // Function to greet user
+    function greetUser() {
+      const name = nameInput.value.trim();
+      console.log("greetUser() called with name:", name);  // <-- log name value
+
+      // Simple validation
+      if (name === "") {
+        message.textContent = "Please enter your name.";
+        message.style.color = "red";
+        console.error("Name input was empty!");
+        return;
+      }
+
+      // If you want to debug, set a breakpoint here to inspect "name"
+      message.textContent = `Hello, ${name}! Welcome to the community event portal.`;
+      message.style.color = "green";
+      console.log("Greeting displayed successfully.");
+    }
+
+    // Event listener for button click
+    greetBtn.addEventListener("click", () => {
+      console.log("Greet button clicked.");
+      greetUser();
+    });
+  </script>
+</body>
+</html>

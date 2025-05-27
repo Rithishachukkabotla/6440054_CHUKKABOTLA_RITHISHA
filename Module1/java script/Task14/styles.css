@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 2rem;
+  background: #f4f6f8;
+}
+
+button {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1c5980;
+}
+
+#eventCard {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}

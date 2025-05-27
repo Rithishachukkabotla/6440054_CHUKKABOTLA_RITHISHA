@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap Pricing Section</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f1f5f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .pricing-section {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    .card {
+      border-radius: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .card-header {
+      background-color: #0d6efd;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+      font-size: 1.25rem;
+    }
+
+    .price {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0d6efd;
+    }
+
+    .features li {
+      margin-bottom: 10px;
+      color: #495057;
+    }
+
+    .btn-plan {
+      background-color: #0d6efd;
+      color: white;
+      border-radius: 50px;
+      padding: 10px 25px;
+      font-weight: 600;
+    }
+
+    .btn-plan:hover {
+      background-color: #0b5ed7;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container pricing-section text-center">
+    <h2 class="mb-4 fw-bold">Choose Your Plan</h2>
+    <p class="mb-5 text-muted">Simple pricing for everyone. Upgrade anytime.</p>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Basic Plan -->
+      <div class="col">
+        <div class="card h-100 px-4 py-3">
+          <div class="card-header">Basic</div>
+          <div class="card-body">
+            <p class="price mb-3">$9<span class="fs-6 text-muted">/mo</span></p>
+            <ul class="list-unstyled features">
+              <li>✔ 1 Website</li>
+              <li>✔ Basic Support</li>
+              <li>✔ 10GB Storage</li>
+            </ul>
+            <a href="#" class="btn btn-plan mt-3">Get Started</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pro Plan -->
+      <div class="col">
+        <div class="card h-100 px-4 py-3 border-primary border-2">
+          <div class="card-header bg-primary text-white">Pro</div>
+          <div class="card-body">
+            <p class="price mb-3">$29<span class="fs-6 text-muted">/mo</span></p>
+            <ul class="list-unstyled features">
+              <li>✔ 5 Websites</li>
+              <li>✔ Priority Support</li>
+              <li>✔ 100GB Storage</li>
+            </ul>
+            <a href="#" class="btn btn-plan mt-3">Choose Pro</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enterprise Plan -->
+      <div class="col">
+        <div class="card h-100 px-4 py-3">
+          <div class="card-header">Enterprise</div>
+          <div class="card-body">
+            <p class="price mb-3">$99<span class="fs-6 text-muted">/mo</span></p>
+            <ul class="list-unstyled features">
+              <li>✔ Unlimited Websites</li>
+              <li>✔ 24/7 Support</li>
+              <li>✔ 1TB Storage</li>
+            </ul>
+            <a href="#" class="btn btn-plan mt-3">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

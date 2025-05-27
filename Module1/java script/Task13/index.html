@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Debugging Registration Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Debug: Register for an Event</h1>
+  </header>
+
+  <main>
+    <form id="registration-form" novalidate>
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required />
+        <small class="error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+        <small class="error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="event">Select Event:</label>
+        <select id="event" name="event" required>
+          <option value="">-- Select an Event --</option>
+          <option value="Community Gardening">Community Gardening</option>
+          <option value="Tech Workshop">Tech Workshop</option>
+          <option value="Yoga Class">Yoga Class</option>
+          <option value="Tree Planting">Tree Planting</option>
+        </select>
+        <small class="error-message"></small>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+
+    <div id="message" class="hidden"></div>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

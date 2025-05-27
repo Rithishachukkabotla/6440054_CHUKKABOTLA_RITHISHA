@@ -1,0 +1,20 @@
+/* =========================================
+   CTA Button Styles
+   ========================================= */
+
+/* Style for main CTA button */
+.cta-button {
+  background-color: #007BFF;  /* Bright blue background */
+  color: white;               /* White text */
+  padding: 12px 24px;         /* Spacing inside the button */
+  border: none;               /* No border */
+  border-radius: 5px;         /* Rounded corners */
+  font-size: 16px;            /* Readable text size */
+  cursor: pointer;            /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for CTA button */
+.cta-button:hover {
+  background-color: #0056b3;  /* Darker blue on hover */
+}

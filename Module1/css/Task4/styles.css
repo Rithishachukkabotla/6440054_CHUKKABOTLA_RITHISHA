@@ -1,0 +1,66 @@
+/* =========================================
+   Base Reset and Background
+   ========================================= */
+
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background image with fallback color */
+body {
+  background-color: #f0f0f0; /* Fallback color (light gray) */
+  background-image: url('https://via.placeholder.com/1500x1000'); /* Replace with actual city image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Segoe UI', sans-serif;
+  color: #222222; /* Default text color (HEX) */
+  padding: 20px;
+}
+
+/* =========================================
+   Section Header with Gradient
+   ========================================= */
+
+.section-header {
+  background: linear-gradient(to right, #004d99, #66ccff); /* Gradient from dark to light blue */
+  color: #ffffff;
+  padding: 30px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* =========================================
+   Event Section Styling
+   ========================================= */
+
+.event-section h2 {
+  font-size: 28px;
+  color: rgba(0, 0, 0, 0.85); /* RGBA text color */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.event-card {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-card h3 {
+  font-size: 22px;
+  color: #004d99; /* Council's primary HEX color */
+  margin-bottom: 10px;
+}
+
+.event-card p {
+  color: rgba(34, 34, 34, 0.9); /* Almost black with slight transparency */
+  font-size: 16px;
+}

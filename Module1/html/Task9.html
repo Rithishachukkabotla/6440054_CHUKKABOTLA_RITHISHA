@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Find Nearby Events - Geolocation Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f8ff;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #geoStatus {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #444;
+    }
+    #coordinates {
+      margin-top: 8px;
+      font-size: 1rem;
+      font-family: monospace;
+      color: #2d862d;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Find Nearby Events</h1>
+  <button id="findEventsBtn">Find Nearby Events</button>
+
+  <p id="geoStatus"></p>
+  <p id="coordinates"></p>
+
+  <script>
+    const findBtn = document.getElementById("findEventsBtn");
+    const status = document.getElementById("geoStatus");
+    const coords = document.getElementById("coordinates");
+
+    findBtn.addEventListener("click", () => {
+      // Check if geolocation supported
+      if (!navigator.geolocation) {
+        status.textContent = "Geolocation is not supported by your browser.";
+        coords.textContent = "";
+        return;
+      }
+
+      status.textContent = "Locating… Please allow location access.";
+      coords.textContent = "";
+
+      // Get position with options
+      navigator.geolocation.getCurrentPosition(success, error, {
+        enableHighAccuracy: true,
+        timeout: 10000,       // 10 seconds timeout
+        maximumAge: 0         // No cached position
+      });
+    });
+
+    function success(position) {
+      const latitude = position.coords.latitude.toFixed(6);
+      const longitude = position.coords.longitude.toFixed(6);
+      status.textContent = "Location found!";
+      coords.textContent = `Latitude: ${latitude}°, Longitude: ${longitude}°`;
+    }
+
+    function error(err) {
+      switch(err.code) {
+        case err.PERMISSION_DENIED:
+          status.textContent = "Permission denied. Please allow location access.";
+          break;
+        case err.POSITION_UNAVAILABLE:
+          status.textContent = "Location information is unavailable.";
+          break;
+        case err.TIMEOUT:
+          status.textContent = "Request timed out. Please try again.";
+          break;
+        default:
+          status.textContent = "An unknown error occurred.";
+          break;
+      }
+      coords.textContent = "";
+    }
+  </script>
+
+</body>
+</html>

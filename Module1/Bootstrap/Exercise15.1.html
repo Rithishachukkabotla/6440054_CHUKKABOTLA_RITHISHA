@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Styled Profile Image</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .profile-card {
+      background-color: #ffffff;
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .profile-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+
+    .profile-title {
+      font-size: 1rem;
+      color: #6c757d;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container my-5">
+  <div class="profile-card border border-primary border-3">
+    <img src="https://source.unsplash.com/150x150/?portrait,face" alt="Profile"
+         class="rounded-circle border border-primary border-3 profile-img" />
+    <div class="profile-name">Jane Doe</div>
+    <div class="profile-title">UI/UX Designer</div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

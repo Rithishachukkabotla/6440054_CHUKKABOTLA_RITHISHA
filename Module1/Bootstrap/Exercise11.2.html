@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap 5 Media Object</title>
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: #eef2f7;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .media-object {
+      max-width: 700px;
+      background: white;
+      padding: 25px 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .media-object img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 15px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .media-object img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    .media-body {
+      flex: 1;
+      color: #2c3e50;
+    }
+    .media-body h5 {
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 0.3rem;
+      color: #0d6efd;
+    }
+    .media-body small {
+      font-weight: 600;
+      color: #6c757d;
+      display: block;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .media-body p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #495057;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="media-object">
+    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=140&q=80" alt="Profile Picture" />
+    <div class="media-body">
+      <h5>Michael Thompson</h5>
+      <small>Senior Developer</small>
+      <p>
+        Michael is a passionate full-stack developer with over 10 years of experience building scalable web applications. 
+        He enjoys mentoring junior developers and contributing to open-source projects.
+      </p>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

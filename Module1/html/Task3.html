@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome Banner</title>
+  <style>
+    /* Internal CSS */
+    #welcomeBanner {
+      background-color: #007bff; /* blue background */
+      color: white;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: 40px auto;
+      text-align: center;
+    }
+    .highlight {
+      background-color: yellow;
+      color: #004085;
+      font-weight: bold;
+      padding: 0 5px;
+      border-radius: 3px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 8px 16px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #ffc107;
+      color: #333;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #e0a800;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="welcomeBanner">
+    <h2>Welcome back, <span class="highlight">Alex!</span></h2>
+    <p>
+      We're excited to have you here. Don't miss our 
+      <span style="color: red; font-weight: bold;">Special Offer</span> today!
+    </p>
+    <p>
+      Check out the <span class="highlight">latest events</span> and get involved.
+    </p>
+    <button id="toggleHighlightBtn">Toggle Highlight</button>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleHighlightBtn');
+    const highlights = document.querySelectorAll('.highlight');
+
+    toggleBtn.addEventListener('click', () => {
+      highlights.forEach(el => el.classList.toggle('highlight'));
+    });
+  </script>
+
+</body>
+</html>

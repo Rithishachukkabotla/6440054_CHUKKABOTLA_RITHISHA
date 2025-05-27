@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Visibility Example</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .hero-section {
+      min-height: 70vh;
+      background-color: #f8fafc;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .hero-content {
+      padding: 2rem;
+    }
+
+    .hero-img {
+      max-width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-hero {
+      background-color: #0d6efd;
+      color: white;
+      font-weight: 600;
+      padding: 10px 25px;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-hero:hover {
+      background-color: #0b5ed7;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <div class="hero-section d-lg-flex align-items-center justify-content-between">
+      
+      <!-- Left content (Always visible) -->
+      <div class="hero-content text-center text-lg-start">
+        <h2 class="fw-bold mb-3">Responsive Display Utilities</h2>
+        <p class="lead text-muted mb-4">
+          This text block is always visible. The image appears only on <strong>medium</strong> and <strong>large</strong> screens.
+        </p>
+        <a href="#" class="btn btn-hero">Learn More</a>
+      </div>
+
+      <!-- Right image (hidden on small, shown on md+, flex on lg+) -->
+      <div class="d-none d-md-block ms-lg-4">
+        <img src="https://source.unsplash.com/500x350/?technology,code" alt="Tech" class="hero-img" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+/* =========================================
+   Multi-Column Text Styling for News Article
+   ========================================= */
+
+.news-article {
+  width: 80%;
+  margin: 30px auto;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  
+  column-count: 2;
+  column-gap: 30px;
+  column-rule: 1px solid gray;
+}
+
+.news-article h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Arial Black', Gadget, sans-serif;
+}

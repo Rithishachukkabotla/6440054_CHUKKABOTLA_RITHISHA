@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rounded Pill Card</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f8fafc;
+    }
+
+    .custom-card {
+      border-radius: 1rem;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .custom-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .pill-badge {
+      font-size: 0.875rem;
+      padding: 0.4rem 1rem;
+    }
+
+    .card-btn {
+      padding: 0.5rem 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container py-5">
+  <div class="card shadow-lg custom-card text-center mx-auto" style="max-width: 400px;">
+    <div class="card-body">
+      <span class="badge bg-primary rounded-pill pill-badge mb-3">Featured</span>
+      <h4 class="card-title fw-bold">Premium Access</h4>
+      <p class="card-text text-muted">
+        Unlock advanced features with a clean, stylish card using <code>shadow-lg</code> and <code>rounded-pill</code>.
+      </p>
+      <a href="#" class="btn btn-outline-primary rounded-pill card-btn">Upgrade Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

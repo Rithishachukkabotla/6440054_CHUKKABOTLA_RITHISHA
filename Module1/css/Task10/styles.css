@@ -1,0 +1,99 @@
+/* =========================================
+   Base Styles (Desktop First)
+   ========================================= */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0 5vw; /* Responsive horizontal padding */
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.nav-bar {
+  background-color: #007BFF;
+  padding: 1vh 2vw;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 3vw;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2vw; /* Responsive font size */
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #ffcc00;
+}
+
+.hero {
+  max-width: 1000px;
+  margin: 2vh auto;
+  text-align: center;
+  padding: 2vh 2vw;
+}
+
+.hero h1 {
+  font-size: 3vw;
+  margin-bottom: 1vh;
+}
+
+.hero img {
+  width: 80vw; /* Responsive width */
+  max-width: 800px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1vh;
+}
+
+.hero p {
+  font-size: 1.5vw;
+  line-height: 1.4;
+}
+
+/* =========================================
+   Responsive Styles (Screens < 768px)
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  /* Stack nav links vertically */
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vh;
+  }
+
+  .nav-menu li a {
+    font-size: 5vw; /* Larger tap area on small screens */
+  }
+
+  /* Adjust hero text and image sizes */
+  .hero h1 {
+    font-size: 7vw;
+  }
+
+  .hero img {
+    width: 90vw;
+    max-width: none;
+  }
+
+  .hero p {
+    font-size: 4vw;
+  }
+
+  /* Add padding to body */
+  body {
+    padding: 2vh 4vw;
+  }
+}

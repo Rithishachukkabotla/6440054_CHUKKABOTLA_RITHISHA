@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Local Community Event Portal - Navigation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      line-height: 1.6;
+      background-color: #f5f5f5;
+    }
+    nav {
+      background-color: #004085;
+      padding: 10px 20px;
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover,
+    nav a:focus {
+      background-color: #002752;
+      outline: none;
+    }
+    section {
+      padding: 40px 20px;
+      background-color: white;
+      margin: 20px auto;
+      max-width: 800px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #004085;
+      margin-top: 0;
+    }
+    footer {
+      text-align: center;
+      margin: 40px 0;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#events">Events</a>
+    <a href="#contact">Contact</a>
+    <a href="help.html" target="_blank" rel="noopener noreferrer">Help</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <section id="home">
+      <h2>Home</h2>
+      <p>Welcome to the Local Community Event Portal! Stay connected with upcoming activities and services.</p>
+    </section>
+
+    <section id="events">
+      <h2>Events</h2>
+      <p>Discover local events happening around you. Join the fun and meet your neighbors!</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>If you have questions or need assistance, feel free to reach out to our support team.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Local City Council
+  </footer>
+
+  <script>
+    // Optional: Smooth scroll for anchor links
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetID = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetID);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

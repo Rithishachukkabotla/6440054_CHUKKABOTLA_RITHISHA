@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Sidebar</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f8fafc;
+    }
+
+    .sidebar {
+      background-color: #1e293b;
+      color: white;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      border-radius: 0 1rem 1rem 0;
+      box-shadow: 4px 0 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar h5 {
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #cbd5e1;
+      text-decoration: none;
+      margin-bottom: 1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      transition: background-color 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #334155;
+      color: white;
+    }
+
+    .main-content {
+      padding: 2rem;
+    }
+
+    .card {
+      border-radius: 1rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <!-- Sidebar - visible only on md and up -->
+    <div class="col-md-3 d-none d-md-block sidebar">
+      <h5>📚 Navigation</h5>
+      <a href="#">Dashboard</a>
+      <a href="#">Profile</a>
+      <a href="#">Messages</a>
+      <a href="#">Settings</a>
+    </div>
+
+    <!-- Main content -->
+    <div class="col-md-9 col-12 main-content">
+      <h2 class="fw-bold mb-4">Responsive Sidebar Layout</h2>
+      <div class="card p-4">
+        <p class="lead text-muted">
+          This layout uses <code>d-none d-md-block</code> to show the sidebar on tablets and larger devices only.
+        </p>
+        <p>
+          On smaller devices, the sidebar is hidden to ensure better space usage. You can further enhance it by adding a mobile toggle menu if needed.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

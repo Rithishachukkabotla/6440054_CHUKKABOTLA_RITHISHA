@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dark Gradient Hero</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: linear-gradient(135deg, #0d0d0d, #343a40);
+      border-radius: 1rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #d1d5db;
+    }
+
+    .btn-glow {
+      background-color: #0d6efd;
+      color: white;
+      border: none;
+      font-weight: 600;
+      padding: 12px 30px;
+      border-radius: 50px;
+      box-shadow: 0 8px 24px rgba(13, 110, 253, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .btn-glow:hover {
+      background-color: #0b5ed7;
+      box-shadow: 0 12px 30px rgba(13, 110, 253, 0.6);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container my-5">
+    <div class="hero bg-dark bg-gradient text-white p-5 text-center">
+      <div>
+        <h1>Welcome to Dark Mode 🌙</h1>
+        <p class="lead mb-4">This section uses <code>bg-dark</code> + <code>bg-gradient</code> for a sleek and modern look.</p>
+        <a href="#" class="btn btn-glow">Explore Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

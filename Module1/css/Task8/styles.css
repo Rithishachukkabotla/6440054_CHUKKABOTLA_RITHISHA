@@ -1,0 +1,48 @@
+/* =========================================
+   Box Model & Layout Control
+   ========================================= */
+
+/* Style for event cards */
+.eventCard {
+  border: 2px solid #007BFF;      /* Border around each card */
+  padding: 20px;                  /* Inner space */
+  margin: 15px 0;                 /* Space between cards */
+  border-radius: 8px;
+  background-color: #e6f0ff;
+}
+
+/* Form fields highlight on focus */
+.highlightable:focus {
+  outline: 3px solid #ff6600;    /* Orange outline on focus */
+  outline-offset: 3px;
+  border: 1px solid #ff6600;
+}
+
+/* Visibility examples */
+.box {
+  width: 200px;
+  height: 50px;
+  background-color: #007BFF;
+  color: white;
+  line-height: 50px;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Visible box - normal */
+.visible-box {
+  visibility: visible;
+}
+
+/* Hidden box - takes up space but not visible */
+.hidden-box {
+  visibility: hidden;
+  background-color: #ff6600;
+}
+
+/* None box - removed from layout, no space */
+.none-box {
+  display: none;
+}

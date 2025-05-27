@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap Folder Structure</title>
+
+  <!-- Bootstrap CSS (local or CDN) -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+  <!-- Optional Bootstrap Icons (via CDN for simplicity) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background: #f8f9fa;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .container {
+      margin-top: 50px;
+    }
+    .card i {
+      font-size: 2rem;
+      color: #0d6efd;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="mb-4 text-center">📁 Bootstrap Folder Structure</h1>
+    <div class="row g-4">
+
+      <!-- CSS Folder Card -->
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body text-center">
+            <i class="bi bi-file-earmark-css"></i>
+            <h5 class="card-title mt-2">CSS Folder</h5>
+            <p class="card-text">Contains Bootstrap stylesheets including `bootstrap.min.css`, used for layout, grid, buttons, colors, etc.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- JS Folder Card -->
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body text-center">
+            <i class="bi bi-file-earmark-code"></i>
+            <h5 class="card-title mt-2">JS Folder</h5>
+            <p class="card-text">Includes Bootstrap JavaScript components like modals, dropdowns, tooltips, using `bootstrap.bundle.min.js`.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Icons Folder Card -->
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body text-center">
+            <i class="bi bi-stars"></i>
+            <h5 class="card-title mt-2">Icons Folder</h5>
+            <p class="card-text">Optional. If downloaded, contains Bootstrap Icons (`.svg`) or a CSS file to add icons using `<i class="bi bi-alarm"></i>`.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

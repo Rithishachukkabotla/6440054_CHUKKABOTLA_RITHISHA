@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap 5 Tabs & Pills</title>
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: #f0f4f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 720px;
+      background: white;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 700;
+      color: #0d6efd;
+      letter-spacing: 1px;
+    }
+    /* Nav-tabs custom */
+    .nav-tabs .nav-link {
+      color: #495057;
+      font-weight: 600;
+      border: none;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s ease;
+      padding: 12px 18px;
+      font-size: 1rem;
+      border-radius: 0;
+    }
+    .nav-tabs .nav-link.active {
+      color: #0d6efd;
+      border-bottom-color: #0d6efd;
+      background-color: transparent;
+      font-weight: 700;
+    }
+    .nav-tabs .nav-link:hover:not(.active) {
+      color: #0d6efd;
+      border-bottom-color: #a5d8ff;
+    }
+
+    /* Nav-pills custom */
+    .nav-pills .nav-link {
+      font-weight: 600;
+      color: #495057;
+      background-color: #e9ecef;
+      margin-right: 8px;
+      border-radius: 50px;
+      padding: 10px 22px;
+      font-size: 0.95rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .nav-pills .nav-link.active {
+      background-color: #0d6efd;
+      color: white;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(13, 110, 253, 0.4);
+    }
+    .nav-pills .nav-link:hover:not(.active) {
+      background-color: #d0e2ff;
+      color: #0d6efd;
+    }
+
+    /* Tab content styling */
+    .tab-content {
+      margin-top: 25px;
+      font-size: 1rem;
+      color: #343a40;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Bootstrap 5 Tabs & Pills</h2>
+
+    <!-- Nav Tabs -->
+    <ul class="nav nav-tabs" id="tabExample" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" 
+          type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" 
+          type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" 
+          type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="tabExampleContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <p>Welcome to the Home tab! This area can include any content you want, such as text, images, or links.</p>
+      </div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <p>This is the Profile tab content. Use tabs to organize content efficiently and enhance UX.</p>
+      </div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        <p>Get in touch via the Contact tab. Customize tab content to suit your application.</p>
+      </div>
+    </div>
+
+    <hr class="my-5">
+
+    <!-- Nav Pills -->
+    <ul class="nav nav-pills" id="pillsExample" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="pill-home-tab" data-bs-toggle="pill" data-bs-target="#pill-home" 
+          type="button" role="tab" aria-controls="pill-home" aria-selected="true">Dashboard</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pill-settings-tab" data-bs-toggle="pill" data-bs-target="#pill-settings" 
+          type="button" role="tab" aria-controls="pill-settings" aria-selected="false">Settings</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pill-messages-tab" data-bs-toggle="pill" data-bs-target="#pill-messages" 
+          type="button" role="tab" aria-controls="pill-messages" aria-selected="false">Messages</button>
+      </li>
+    </ul>
+
+    <div class="tab-content mt-3" id="pillsExampleContent">
+      <div class="tab-pane fade show active" id="pill-home" role="tabpanel" aria-labelledby="pill-home-tab">
+        <p>Dashboard content area. Use pills for a more modern, button-like navigation style.</p>
+      </div>
+      <div class="tab-pane fade" id="pill-settings" role="tabpanel" aria-labelledby="pill-settings-tab">
+        <p>Adjust your preferences and settings here.</p>
+      </div>
+      <div class="tab-pane fade" id="pill-messages" role="tabpanel" aria-labelledby="pill-messages-tab">
+        <p>View your messages and notifications.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

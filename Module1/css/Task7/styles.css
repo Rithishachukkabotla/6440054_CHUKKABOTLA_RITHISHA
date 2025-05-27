@@ -1,0 +1,35 @@
+/* =========================================
+   Table Styling for Event Admin
+   ========================================= */
+
+.events-table {
+  width: 80%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.events-table th,
+.events-table td {
+  border: 1px solid #ccc;
+  padding: 12px 15px;
+}
+
+/* Table header styles */
+.events-table thead th {
+  background-color: #007BFF;
+  color: white;
+  font-weight: bold;
+}
+
+/* Zebra striping for even rows */
+.events-table tbody tr:nth-child(even) {
+  background-color: #f2f7ff;
+}
+
+/* Zebra striping for odd rows (optional for contrast) */
+.events-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}

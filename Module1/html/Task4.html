@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Community Event Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      background: #f7f9fc;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #004085;
+      margin-bottom: 30px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+    caption {
+      caption-side: top;
+      font-weight: bold;
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: #222;
+    }
+    td {
+      text-align: center;
+      padding: 10px;
+      vertical-align: top;
+    }
+    img.gallery-img {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+      border: 3px solid #007bff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    img.gallery-img:hover {
+      transform: scale(1.05);
+      border-color: #0056b3;
+    }
+    p.caption {
+      margin-top: 8px;
+      font-weight: 600;
+      color: #004085;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Community Event Gallery</h1>
+
+  <table>
+    <caption>Photos from Recent Community Events</caption>
+    <tbody>
+      <tr>
+        <td>
+          <img 
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=150&q=80" 
+            alt="Spring Festival Parade" 
+            title="Spring Festival Parade" 
+            class="gallery-img" 
+          />
+          <p class="caption">Spring Festival</p>
+        </td>
+        <td>
+          <img 
+            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=150&q=80" 
+            alt="Community Cleanup Drive" 
+            title="Community Cleanup Drive" 
+            class="gallery-img" 
+          />
+          <p class="caption">Cleanup Drive</p>
+        </td>
+        <td>
+          <img 
+            src="https://images.unsplash.com/photo-1468071174046-657d9d351a40?auto=format&fit=crop&w=150&q=80" 
+            alt="Outdoor Music Concert" 
+            title="Outdoor Music Concert" 
+            class="gallery-img" 
+          />
+          <p class="caption">Music Concert</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img 
+            src="https://images.unsplash.com/photo-1432821596592-e2c18b78144f?auto=format&fit=crop&w=150&q=80" 
+            alt="Farmers Market" 
+            title="Farmers Market" 
+            class="gallery-img" 
+          />
+          <p class="caption">Farmers Market</p>
+        </td>
+        <td>
+          <img 
+            src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=150&q=80" 
+            alt="Youth Sports Day" 
+            title="Youth Sports Day" 
+            class="gallery-img" 
+          />
+          <p class="caption">Youth Sports</p>
+        </td>
+        <td>
+          <img 
+            src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=150&q=80" 
+            alt="Holiday Lights Celebration" 
+            title="Holiday Lights Celebration" 
+            class="gallery-img" 
+          />
+          <p class="caption">Holiday Celebration</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
